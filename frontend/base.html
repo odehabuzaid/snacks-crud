@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Snacks Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #1a202c;
+        text-align: left;
+        background-color: #e2e8f0;
+      }
+
+      .card-footer,
+      .card-header {
+        display: flex;
+        align-items: center;
+      }
+
+      .card {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-body">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="main-breadcrumb" width="100%">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">admin</a></li>
+            <li class="breadcrumb-item active" aria-current="page"
+              >Snacks-List</li
+            >
+          </ol>
+        </nav>
+        <!-- /Breadcrumb -->
+        <button
+          onclick="window.location.href='{% url 'snack_create'%}'"
+          class="btn btn-outline-secondary mb-3"
+          >add new</button
+        >
+        <div class="row gutters-sm"></div>
+        <div class="row gutters-sm">
+          {% block content %} {% endblock content %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

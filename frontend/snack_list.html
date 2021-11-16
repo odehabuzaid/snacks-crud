@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+
+{% if snack_list %}
+  
+  {% for snack in snack_list %}
+    
+    <div class="col-sm-6 col-xl-3 mb-3">
+      <div class="card">
+        <div
+          class="card-header border-bottom flex-column align-items-start p-3"
+        >
+          <img src = "https://www.svgrepo.com/show/288038/snack-snacks.svg" width="24" height="24" class="feather feather-box text-secondary h3 stroke-width-1 mb-2" alt="My Happy SVG"/>
+          <h4 class="text-primary font-weight-light mb-2">{{snack.name}}</h4>
+          <p class="font-size-sm mb-0">Purchaser: {{snack.purchaser}}</p>
+        </div>
+        <div class="card-header border-bottom justify-content-center py-4">
+          <button onclick="window.location.href='{% url 'snack_details' snack.pk %}'" class="btn btn-outline-secondary mr-1">Details</button>
+            <button onclick="window.location.href='{% url 'snack_update' snack.pk %}'" class="btn btn-outline-info mr-1">Update</button>
+                <button onclick="window.location.href='{% url 'snack_delete' snack.pk %}'" class="btn btn-outline-danger mr-1">Delete</button>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+
+{% else %}
+<p>There are no snacks added yet.</p>
+{% endif %} {% endblock %}
