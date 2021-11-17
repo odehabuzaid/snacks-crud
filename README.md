@@ -1,10 +1,7 @@
 # Django CRUD
-[Pull-Request](https://github.com/odehabuzaid/snacks-crud/pull/1)
-
 [Live Version ](https://django-snacks-crud.herokuapp.com/admin/)
 - username : admin
 - passowrd : admin@123
-
 
 > Django CRUD Heroku Deployement
 
@@ -96,5 +93,4 @@ value : # the above randomly generated secret key
 $5osg_xk6i)-r123rg83i9y7s9@bh&&vg@9u&@h7w&z25+7s$k
 
 ```
-
 
